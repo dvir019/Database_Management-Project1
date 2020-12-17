@@ -16,106 +16,189 @@
     </database>
     <schema id="4" parent="3" name="Experiments">
       <ObjectId>7</ObjectId>
-      <IntrospectionTimestamp>2020-12-17.17:05:49.053</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2020-12-17.22:05:13.633</IntrospectionTimestamp>
     </schema>
     <schema id="5" parent="3" name="INFORMATION_SCHEMA">
       <ObjectId>3</ObjectId>
     </schema>
     <schema id="6" parent="3" name="Project1">
       <ObjectId>6</ObjectId>
-      <IntrospectionTimestamp>2020-12-17.17:05:49.583</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2020-12-17.22:05:14.200</IntrospectionTimestamp>
     </schema>
-    <schema id="7" parent="3" name="database_test">
+    <schema id="7" parent="3" name="Roi&apos;s Experiment">
+      <ObjectId>8</ObjectId>
+    </schema>
+    <schema id="8" parent="3" name="database_test">
       <ObjectId>5</ObjectId>
     </schema>
-    <schema id="8" parent="3" name="db_accessadmin">
+    <schema id="9" parent="3" name="db_accessadmin">
       <ObjectId>16385</ObjectId>
     </schema>
-    <schema id="9" parent="3" name="db_backupoperator">
+    <schema id="10" parent="3" name="db_backupoperator">
       <ObjectId>16389</ObjectId>
     </schema>
-    <schema id="10" parent="3" name="db_datareader">
+    <schema id="11" parent="3" name="db_datareader">
       <ObjectId>16390</ObjectId>
     </schema>
-    <schema id="11" parent="3" name="db_datawriter">
+    <schema id="12" parent="3" name="db_datawriter">
       <ObjectId>16391</ObjectId>
     </schema>
-    <schema id="12" parent="3" name="db_ddladmin">
+    <schema id="13" parent="3" name="db_ddladmin">
       <ObjectId>16387</ObjectId>
     </schema>
-    <schema id="13" parent="3" name="db_denydatareader">
+    <schema id="14" parent="3" name="db_denydatareader">
       <ObjectId>16392</ObjectId>
     </schema>
-    <schema id="14" parent="3" name="db_denydatawriter">
+    <schema id="15" parent="3" name="db_denydatawriter">
       <ObjectId>16393</ObjectId>
     </schema>
-    <schema id="15" parent="3" name="db_owner">
+    <schema id="16" parent="3" name="db_owner">
       <ObjectId>16384</ObjectId>
     </schema>
-    <schema id="16" parent="3" name="db_securityadmin">
+    <schema id="17" parent="3" name="db_securityadmin">
       <ObjectId>16386</ObjectId>
     </schema>
-    <schema id="17" parent="3" name="dbo">
+    <schema id="18" parent="3" name="dbo">
       <ObjectId>1</ObjectId>
-      <IntrospectionTimestamp>2020-12-17.17:05:49.710</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2020-12-17.22:05:14.397</IntrospectionTimestamp>
       <Current>1</Current>
     </schema>
-    <schema id="18" parent="3" name="guest">
+    <schema id="19" parent="3" name="guest">
       <ObjectId>2</ObjectId>
     </schema>
-    <schema id="19" parent="3" name="sys">
+    <schema id="20" parent="3" name="sys">
       <ObjectId>4</ObjectId>
     </schema>
-    <table id="20" parent="4" name="table_name">
+    <table id="21" parent="4" name="table_name">
       <ObjectId>1698105090</ObjectId>
       <CreatedTimestamp>2020-12-17.17:01:09.080</CreatedTimestamp>
       <ModifiedTimestamp>2020-12-17.17:01:09.080</ModifiedTimestamp>
     </table>
-    <table id="21" parent="17" name="A">
+    <table id="22" parent="18" name="A">
       <ObjectId>1618104805</ObjectId>
       <CreatedTimestamp>2020-12-17.16:58:25.370</CreatedTimestamp>
       <ModifiedTimestamp>2020-12-17.16:58:25.370</ModifiedTimestamp>
     </table>
-    <table id="22" parent="17" name="Conversations">
+    <table id="23" parent="18" name="AcademicInstitution">
+      <ObjectId>1406628054</ObjectId>
+      <CreatedTimestamp>2020-12-17.22:05:10.810</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.830</ModifiedTimestamp>
+    </table>
+    <table id="24" parent="18" name="Character">
+      <ObjectId>1054626800</ObjectId>
+      <CreatedTimestamp>2020-12-17.22:05:10.753</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.900</ModifiedTimestamp>
+    </table>
+    <table id="25" parent="18" name="Conversations">
       <ObjectId>1250103494</ObjectId>
       <CreatedTimestamp>2020-11-18.19:38:22.913</CreatedTimestamp>
       <ModifiedTimestamp>2020-11-18.19:38:26.807</ModifiedTimestamp>
     </table>
-    <table id="23" parent="17" name="Participated">
+    <table id="26" parent="18" name="Feelings">
+      <ObjectId>1214627370</ObjectId>
+      <CreatedTimestamp>2020-12-17.22:05:10.783</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.783</ModifiedTimestamp>
+    </table>
+    <table id="27" parent="18" name="Games">
+      <ObjectId>1918629878</ObjectId>
+      <CreatedTimestamp>2020-12-17.22:05:10.880</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.900</ModifiedTimestamp>
+    </table>
+    <table id="28" parent="18" name="HeterogeneousInstitution">
+      <ObjectId>1470628282</ObjectId>
+      <CreatedTimestamp>2020-12-17.22:05:10.820</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.847</ModifiedTimestamp>
+    </table>
+    <table id="29" parent="18" name="HomogeneousInstitution">
+      <ObjectId>1518628453</ObjectId>
+      <CreatedTimestamp>2020-12-17.22:05:10.827</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.840</ModifiedTimestamp>
+    </table>
+    <table id="30" parent="18" name="Houses">
+      <ObjectId>1630628852</ObjectId>
+      <CreatedTimestamp>2020-12-17.22:05:10.843</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.863</ModifiedTimestamp>
+    </table>
+    <table id="31" parent="18" name="Magic">
+      <ObjectId>1294627655</ObjectId>
+      <CreatedTimestamp>2020-12-17.22:05:10.790</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.807</ModifiedTimestamp>
+    </table>
+    <table id="32" parent="18" name="MagicCast">
+      <ObjectId>1342627826</ObjectId>
+      <CreatedTimestamp>2020-12-17.22:05:10.800</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.800</ModifiedTimestamp>
+    </table>
+    <table id="33" parent="18" name="Magician">
+      <ObjectId>1086626914</ObjectId>
+      <CreatedTimestamp>2020-12-17.22:05:10.760</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.873</ModifiedTimestamp>
+    </table>
+    <table id="34" parent="18" name="MembersOfHomogeneous">
+      <ObjectId>1566628624</ObjectId>
+      <CreatedTimestamp>2020-12-17.22:05:10.833</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.833</ModifiedTimestamp>
+    </table>
+    <table id="35" parent="18" name="MembersOfHouses">
+      <ObjectId>1710629137</ObjectId>
+      <CreatedTimestamp>2020-12-17.22:05:10.853</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.853</ModifiedTimestamp>
+    </table>
+    <table id="36" parent="18" name="NotMagician">
+      <ObjectId>1150627142</ObjectId>
+      <CreatedTimestamp>2020-12-17.22:05:10.770</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.770</ModifiedTimestamp>
+    </table>
+    <table id="37" parent="18" name="Participated">
       <ObjectId>1314103722</ObjectId>
       <CreatedTimestamp>2020-11-18.19:38:26.797</CreatedTimestamp>
       <ModifiedTimestamp>2020-11-18.19:38:26.797</ModifiedTimestamp>
     </table>
-    <table id="24" parent="17" name="Users">
+    <table id="38" parent="18" name="TeamPlayers">
+      <ObjectId>1838629593</ObjectId>
+      <CreatedTimestamp>2020-12-17.22:05:10.867</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.867</ModifiedTimestamp>
+    </table>
+    <table id="39" parent="18" name="Teams">
+      <ObjectId>1774629365</ObjectId>
+      <CreatedTimestamp>2020-12-17.22:05:10.860</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.890</ModifiedTimestamp>
+    </table>
+    <table id="40" parent="18" name="Users">
       <ObjectId>1170103209</ObjectId>
       <CreatedTimestamp>2020-11-18.19:38:19.127</CreatedTimestamp>
       <ModifiedTimestamp>2020-11-18.19:38:26.803</ModifiedTimestamp>
     </table>
-    <column id="25" parent="20" name="column_1">
+    <table id="41" parent="18" name="Watchers">
+      <ObjectId>1982630106</ObjectId>
+      <CreatedTimestamp>2020-12-17.22:05:10.897</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.897</ModifiedTimestamp>
+    </table>
+    <column id="42" parent="21" name="column_1">
       <Position>1</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="26" parent="21" name="B">
+    <column id="43" parent="22" name="B">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="27" parent="21" name="X">
+    <column id="44" parent="22" name="X">
       <Position>2</Position>
       <DataType>varchar(5 char)|0s</DataType>
     </column>
-    <column id="28" parent="21" name="Y">
+    <column id="45" parent="22" name="Y">
       <Position>3</Position>
       <DataType>varchar(8 char)|0s</DataType>
     </column>
-    <index id="29" parent="21" name="PK__A__3BD019AF1610E520">
+    <index id="46" parent="22" name="PK__A__3BD019AF1610E520">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>B</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="30" parent="21" name="PK__A__3BD019AF1610E520">
+    <key id="47" parent="22" name="PK__A__3BD019AF1610E520">
       <ObjectId>1634104862</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2020-12-17.16:58:25.393</CreatedTimestamp>
@@ -124,39 +207,121 @@
       <UnderlyingIndexName>PK__A__3BD019AF1610E520</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <check id="31" parent="21" name="CK__A__625A9A57">
+    <check id="48" parent="22" name="CK__A__625A9A57">
       <ObjectId>1650104919</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2020-12-17.16:58:25.393</CreatedTimestamp>
       <ModifiedTimestamp>2020-12-17.16:58:25.393</ModifiedTimestamp>
       <Predicate>[X] IS NULL AND [Y] IS NOT NULL OR [Y] IS NULL AND [X] IS NOT NULL</Predicate>
     </check>
-    <column id="32" parent="22" name="cID">
+    <column id="49" parent="23" name="InstitutionName">
+      <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="23" name="Manager">
+      <Position>2</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="51" parent="23" name="PK__Academic__22547BF54A73D5DF">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>InstitutionName</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <index id="52" parent="23" name="UQ__Academic__B01A690571DE5504">
+      <Position>2</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Manager</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="53" parent="23" name="PK__Academic__22547BF54A73D5DF">
+      <ObjectId>1422628111</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.813</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.813</ModifiedTimestamp>
+      <ColNames>InstitutionName</ColNames>
+      <UnderlyingIndexName>PK__Academic__22547BF54A73D5DF</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="54" parent="23" name="UQ__Academic__B01A690571DE5504">
+      <ObjectId>1438628168</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.813</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.813</ModifiedTimestamp>
+      <ColNames>Manager</ColNames>
+      <UnderlyingIndexName>UQ__Academic__B01A690571DE5504</UnderlyingIndexName>
+    </key>
+    <foreign-key id="55" parent="23" name="FK__AcademicI__Manag__56B3DD81">
+      <ObjectId>1454628225</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.817</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.817</ModifiedTimestamp>
+      <ColNames>Manager</ColNames>
+      <RefTableId>1086626914</RefTableId>
+      <RefTableName>Magician</RefTableName>
+      <RefKeyName>PK__Magician__51594B28ED2554B5</RefKeyName>
+      <RefColNames>CharacterName</RefColNames>
+    </foreign-key>
+    <column id="56" parent="24" name="CharacterName">
+      <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="24" name="Role">
+      <Position>2</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="24" name="HairColor">
+      <Position>3</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="59" parent="24" name="PK__Characte__51594B2894C5F90F">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CharacterName</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="60" parent="24" name="PK__Characte__51594B2894C5F90F">
+      <ObjectId>1070626857</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.757</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.757</ModifiedTimestamp>
+      <ColNames>CharacterName</ColNames>
+      <UnderlyingIndexName>PK__Characte__51594B2894C5F90F</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="61" parent="25" name="cID">
       <Position>1</Position>
       <DataType>char(12 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="33" parent="22" name="hostID">
+    <column id="62" parent="25" name="hostID">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="34" parent="22" name="topic">
+    <column id="63" parent="25" name="topic">
       <Position>3</Position>
       <DataType>varchar(30 char)|0s</DataType>
     </column>
-    <column id="35" parent="22" name="duration">
+    <column id="64" parent="25" name="duration">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <index id="36" parent="22" name="PK__Conversa__D830D457B9B91CFB">
+    <index id="65" parent="25" name="PK__Conversa__D830D457B9B91CFB">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>cID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="37" parent="22" name="PK__Conversa__D830D457B9B91CFB">
+    <key id="66" parent="25" name="PK__Conversa__D830D457B9B91CFB">
       <ObjectId>1266103551</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2020-11-18.19:38:22.917</CreatedTimestamp>
@@ -165,7 +330,7 @@
       <UnderlyingIndexName>PK__Conversa__D830D457B9B91CFB</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="38" parent="22" name="FK__Conversat__hostI__4D5F7D71">
+    <foreign-key id="67" parent="25" name="FK__Conversat__hostI__4D5F7D71">
       <ObjectId>1298103665</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2020-11-18.19:38:22.920</CreatedTimestamp>
@@ -177,7 +342,7 @@
       <RefColNames>uID</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <check id="39" parent="22" name="CK__Conversat__durat__4C6B5938">
+    <check id="68" parent="25" name="CK__Conversat__durat__4C6B5938">
       <ObjectId>1282103608</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2020-11-18.19:38:22.920</CreatedTimestamp>
@@ -185,26 +350,607 @@
       <ColNames>duration</ColNames>
       <Predicate>[duration]&gt;=0 AND [duration]&lt;=120</Predicate>
     </check>
-    <column id="40" parent="23" name="uID">
+    <column id="69" parent="26" name="FeltBy">
       <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="26" name="FeltTo">
+      <Position>2</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="26" name="Emotion">
+      <Position>3</Position>
+      <DataType>char(4 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="72" parent="26" name="ExtremeMoment">
+      <Position>4</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="73" parent="26" name="PK__Feelings__05737B3B6ADA1EF4">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>FeltBy
+FeltTo</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="74" parent="26" name="PK__Feelings__05737B3B6ADA1EF4">
+      <ObjectId>1230627427</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.783</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.783</ModifiedTimestamp>
+      <ColNames>FeltBy
+FeltTo</ColNames>
+      <UnderlyingIndexName>PK__Feelings__05737B3B6ADA1EF4</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="75" parent="26" name="FK__Feelings__FeltBy__4B422AD5">
+      <ObjectId>1262627541</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.787</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.787</ModifiedTimestamp>
+      <ColNames>FeltBy</ColNames>
+      <RefTableId>1054626800</RefTableId>
+      <RefTableName>Character</RefTableName>
+      <RefKeyName>PK__Characte__51594B2894C5F90F</RefKeyName>
+      <RefColNames>CharacterName</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="76" parent="26" name="FK__Feelings__FeltTo__4C364F0E">
+      <ObjectId>1278627598</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.787</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.787</ModifiedTimestamp>
+      <ColNames>FeltTo</ColNames>
+      <RefTableId>1054626800</RefTableId>
+      <RefTableName>Character</RefTableName>
+      <RefKeyName>PK__Characte__51594B2894C5F90F</RefKeyName>
+      <RefColNames>CharacterName</RefColNames>
+    </foreign-key>
+    <check id="77" parent="26" name="CK__Feelings__Emotio__4A4E069C">
+      <ObjectId>1246627484</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.787</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.787</ModifiedTimestamp>
+      <ColNames>Emotion</ColNames>
+      <Predicate>[Emotion]=&apos;love&apos; OR [Emotion]=&apos;hate&apos;</Predicate>
+    </check>
+    <column id="78" parent="27" name="HostTeamHouse">
+      <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="27" name="HostedTeamHouse">
+      <Position>2</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="27" name="Year">
+      <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="41" parent="23" name="cID">
-      <Position>2</Position>
-      <DataType>char(12 char)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="42" parent="23" name="grade">
-      <Position>3</Position>
-      <DataType>float|0s</DataType>
-    </column>
-    <column id="43" parent="23" name="finished">
+    <column id="81" parent="27" name="HostScore">
       <Position>4</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="44" parent="23" name="PK__Particip__B0F413799CFF283B">
+    <column id="82" parent="27" name="HostedScore">
+      <Position>5</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="83" parent="27" name="PK__Games__EC5F41B607CF08E6">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>HostTeamHouse
+HostedTeamHouse
+Year</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="84" parent="27" name="PK__Games__EC5F41B607CF08E6">
+      <ObjectId>1934629935</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.890</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.890</ModifiedTimestamp>
+      <ColNames>HostTeamHouse
+HostedTeamHouse
+Year</ColNames>
+      <UnderlyingIndexName>PK__Games__EC5F41B607CF08E6</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="85" parent="27" name="FK__Games__74444068">
+      <ObjectId>1950629992</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.890</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.890</ModifiedTimestamp>
+      <ColNames>HostTeamHouse
+Year</ColNames>
+      <RefTableId>1774629365</RefTableId>
+      <RefTableName>Teams</RefTableName>
+      <RefKeyName>PK__Teams__7A0F7093683EA354</RefKeyName>
+      <RefColNames>TeamHouse
+Year</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="86" parent="27" name="FK__Games__753864A1">
+      <ObjectId>1966630049</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.890</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.890</ModifiedTimestamp>
+      <ColNames>HostedTeamHouse
+Year</ColNames>
+      <RefTableId>1774629365</RefTableId>
+      <RefTableName>Teams</RefTableName>
+      <RefKeyName>PK__Teams__7A0F7093683EA354</RefKeyName>
+      <RefColNames>TeamHouse
+Year</RefColNames>
+    </foreign-key>
+    <column id="87" parent="28" name="InstitutionName">
+      <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="88" parent="28" name="PK__Heteroge__22547BF554561794">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>InstitutionName</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="89" parent="28" name="PK__Heteroge__22547BF554561794">
+      <ObjectId>1486628339</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.823</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.823</ModifiedTimestamp>
+      <ColNames>InstitutionName</ColNames>
+      <UnderlyingIndexName>PK__Heteroge__22547BF554561794</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="90" parent="28" name="FK__Heterogen__Insti__59904A2C">
+      <ObjectId>1502628396</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.823</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.823</ModifiedTimestamp>
+      <ColNames>InstitutionName</ColNames>
+      <RefTableId>1406628054</RefTableId>
+      <RefTableName>AcademicInstitution</RefTableName>
+      <RefKeyName>PK__Academic__22547BF54A73D5DF</RefKeyName>
+      <RefColNames>InstitutionName</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="91" parent="29" name="InstitutionName">
+      <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="92" parent="29" name="PK__Homogene__22547BF5781CA35F">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>InstitutionName</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="93" parent="29" name="PK__Homogene__22547BF5781CA35F">
+      <ObjectId>1534628510</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.830</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.830</ModifiedTimestamp>
+      <ColNames>InstitutionName</ColNames>
+      <UnderlyingIndexName>PK__Homogene__22547BF5781CA35F</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="94" parent="29" name="FK__Homogeneo__Insti__5C6CB6D7">
+      <ObjectId>1550628567</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.830</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.830</ModifiedTimestamp>
+      <ColNames>InstitutionName</ColNames>
+      <RefTableId>1406628054</RefTableId>
+      <RefTableName>AcademicInstitution</RefTableName>
+      <RefKeyName>PK__Academic__22547BF54A73D5DF</RefKeyName>
+      <RefColNames>InstitutionName</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="95" parent="30" name="HouseName">
+      <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="96" parent="30" name="Color">
+      <Position>2</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="97" parent="30" name="NumberOfResidents">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="98" parent="30" name="BelongsTo">
+      <Position>4</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="99" parent="30" name="HeadOfHouse">
+      <Position>5</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="100" parent="30" name="PK__Houses__50DC02A09C5BDB62">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>HouseName</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <index id="101" parent="30" name="UQ__Houses__352561777AE3F552">
+      <Position>2</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>HeadOfHouse</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="102" parent="30" name="PK__Houses__50DC02A09C5BDB62">
+      <ObjectId>1646628909</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.843</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.843</ModifiedTimestamp>
+      <ColNames>HouseName</ColNames>
+      <UnderlyingIndexName>PK__Houses__50DC02A09C5BDB62</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="103" parent="30" name="UQ__Houses__352561777AE3F552">
+      <ObjectId>1662628966</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.847</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.847</ModifiedTimestamp>
+      <ColNames>HeadOfHouse</ColNames>
+      <UnderlyingIndexName>UQ__Houses__352561777AE3F552</UnderlyingIndexName>
+    </key>
+    <foreign-key id="104" parent="30" name="FK__Houses__BelongsT__640DD89F">
+      <ObjectId>1678629023</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.847</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.847</ModifiedTimestamp>
+      <ColNames>BelongsTo</ColNames>
+      <RefTableId>1470628282</RefTableId>
+      <RefTableName>HeterogeneousInstitution</RefTableName>
+      <RefKeyName>PK__Heteroge__22547BF554561794</RefKeyName>
+      <RefColNames>InstitutionName</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="105" parent="30" name="FK__Houses__HeadOfHo__6501FCD8">
+      <ObjectId>1694629080</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.847</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.847</ModifiedTimestamp>
+      <ColNames>HeadOfHouse</ColNames>
+      <RefTableId>1086626914</RefTableId>
+      <RefTableName>Magician</RefTableName>
+      <RefKeyName>PK__Magician__51594B28ED2554B5</RefKeyName>
+      <RefColNames>CharacterName</RefColNames>
+    </foreign-key>
+    <column id="106" parent="31" name="MagicWord">
+      <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="107" parent="31" name="DifficultyLevel">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="108" parent="31" name="Description">
+      <Position>3</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="109" parent="31" name="PK__Magic__F17FBAF48ED84750">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>MagicWord</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="110" parent="31" name="PK__Magic__F17FBAF48ED84750">
+      <ObjectId>1310627712</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.793</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.793</ModifiedTimestamp>
+      <ColNames>MagicWord</ColNames>
+      <UnderlyingIndexName>PK__Magic__F17FBAF48ED84750</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <check id="111" parent="31" name="CK__Magic__Difficult__4F12BBB9">
+      <ObjectId>1326627769</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.793</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.793</ModifiedTimestamp>
+      <ColNames>DifficultyLevel</ColNames>
+      <Predicate>[DifficultyLevel]&gt;=1 AND [DifficultyLevel]&lt;=5</Predicate>
+    </check>
+    <column id="112" parent="32" name="CastedBy">
+      <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="113" parent="32" name="DateAndTime">
+      <Position>2</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="114" parent="32" name="MagicUsed">
+      <Position>3</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="115" parent="32" name="PK__MagicCas__E1D53CB6FFCD4E88">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CastedBy
+DateAndTime</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="116" parent="32" name="PK__MagicCas__E1D53CB6FFCD4E88">
+      <ObjectId>1358627883</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.800</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.800</ModifiedTimestamp>
+      <ColNames>CastedBy
+DateAndTime</ColNames>
+      <UnderlyingIndexName>PK__MagicCas__E1D53CB6FFCD4E88</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="117" parent="32" name="FK__MagicCast__Caste__51EF2864">
+      <ObjectId>1374627940</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.803</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.803</ModifiedTimestamp>
+      <ColNames>CastedBy</ColNames>
+      <RefTableId>1086626914</RefTableId>
+      <RefTableName>Magician</RefTableName>
+      <RefKeyName>PK__Magician__51594B28ED2554B5</RefKeyName>
+      <RefColNames>CharacterName</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="118" parent="32" name="FK__MagicCast__Magic__52E34C9D">
+      <ObjectId>1390627997</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.803</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.803</ModifiedTimestamp>
+      <ColNames>MagicUsed</ColNames>
+      <RefTableId>1294627655</RefTableId>
+      <RefTableName>Magic</RefTableName>
+      <RefKeyName>PK__Magic__F17FBAF48ED84750</RefKeyName>
+      <RefColNames>MagicWord</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="119" parent="33" name="CharacterName">
+      <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="120" parent="33" name="WandNumber">
+      <Position>2</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="121" parent="33" name="PK__Magician__51594B28ED2554B5">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CharacterName</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <index id="122" parent="33" name="UQ__Magician__08A1D7531B68D94F">
+      <Position>2</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>WandNumber</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="123" parent="33" name="PK__Magician__51594B28ED2554B5">
+      <ObjectId>1102626971</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.760</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.760</ModifiedTimestamp>
+      <ColNames>CharacterName</ColNames>
+      <UnderlyingIndexName>PK__Magician__51594B28ED2554B5</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="124" parent="33" name="UQ__Magician__08A1D7531B68D94F">
+      <ObjectId>1118627028</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.763</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.763</ModifiedTimestamp>
+      <ColNames>WandNumber</ColNames>
+      <UnderlyingIndexName>UQ__Magician__08A1D7531B68D94F</UnderlyingIndexName>
+    </key>
+    <foreign-key id="125" parent="33" name="FK__Magician__Charac__43A1090D">
+      <ObjectId>1134627085</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.763</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.763</ModifiedTimestamp>
+      <ColNames>CharacterName</ColNames>
+      <RefTableId>1054626800</RefTableId>
+      <RefTableName>Character</RefTableName>
+      <RefKeyName>PK__Characte__51594B2894C5F90F</RefKeyName>
+      <RefColNames>CharacterName</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="126" parent="34" name="MagicianName">
+      <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="127" parent="34" name="InstitutionName">
+      <Position>2</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="128" parent="34" name="PK__MembersO__7EF974A4ED487DA1">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>MagicianName</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="129" parent="34" name="PK__MembersO__7EF974A4ED487DA1">
+      <ObjectId>1582628681</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.837</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.837</ModifiedTimestamp>
+      <ColNames>MagicianName</ColNames>
+      <UnderlyingIndexName>PK__MembersO__7EF974A4ED487DA1</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="130" parent="34" name="FK__MembersOf__Magic__5F492382">
+      <ObjectId>1598628738</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.837</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.837</ModifiedTimestamp>
+      <ColNames>MagicianName</ColNames>
+      <RefTableId>1086626914</RefTableId>
+      <RefTableName>Magician</RefTableName>
+      <RefKeyName>PK__Magician__51594B28ED2554B5</RefKeyName>
+      <RefColNames>CharacterName</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="131" parent="34" name="FK__MembersOf__Insti__603D47BB">
+      <ObjectId>1614628795</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.837</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.837</ModifiedTimestamp>
+      <ColNames>InstitutionName</ColNames>
+      <RefTableId>1518628453</RefTableId>
+      <RefTableName>HomogeneousInstitution</RefTableName>
+      <RefKeyName>PK__Homogene__22547BF5781CA35F</RefKeyName>
+      <RefColNames>InstitutionName</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="132" parent="35" name="MagicianName">
+      <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="133" parent="35" name="HouseName">
+      <Position>2</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="134" parent="35" name="PK__MembersO__7EF974A4F32D6686">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>MagicianName</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="135" parent="35" name="PK__MembersO__7EF974A4F32D6686">
+      <ObjectId>1726629194</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.853</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.853</ModifiedTimestamp>
+      <ColNames>MagicianName</ColNames>
+      <UnderlyingIndexName>PK__MembersO__7EF974A4F32D6686</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="136" parent="35" name="FK__MembersOf__Magic__67DE6983">
+      <ObjectId>1742629251</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.853</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.853</ModifiedTimestamp>
+      <ColNames>MagicianName</ColNames>
+      <RefTableId>1086626914</RefTableId>
+      <RefTableName>Magician</RefTableName>
+      <RefKeyName>PK__Magician__51594B28ED2554B5</RefKeyName>
+      <RefColNames>CharacterName</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="137" parent="35" name="FK__MembersOf__House__68D28DBC">
+      <ObjectId>1758629308</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.857</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.857</ModifiedTimestamp>
+      <ColNames>HouseName</ColNames>
+      <RefTableId>1630628852</RefTableId>
+      <RefTableName>Houses</RefTableName>
+      <RefKeyName>PK__Houses__50DC02A09C5BDB62</RefKeyName>
+      <RefColNames>HouseName</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="138" parent="36" name="CharacterName">
+      <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="139" parent="36" name="LoyalTo">
+      <Position>2</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+    </column>
+    <index id="140" parent="36" name="PK__NotMagic__51594B284808D52C">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CharacterName</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="141" parent="36" name="PK__NotMagic__51594B284808D52C">
+      <ObjectId>1166627199</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.770</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.770</ModifiedTimestamp>
+      <ColNames>CharacterName</ColNames>
+      <UnderlyingIndexName>PK__NotMagic__51594B284808D52C</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="142" parent="36" name="FK__NotMagici__Chara__467D75B8">
+      <ObjectId>1182627256</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.773</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.773</ModifiedTimestamp>
+      <ColNames>CharacterName</ColNames>
+      <RefTableId>1054626800</RefTableId>
+      <RefTableName>Character</RefTableName>
+      <RefKeyName>PK__Characte__51594B2894C5F90F</RefKeyName>
+      <RefColNames>CharacterName</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="143" parent="36" name="FK__NotMagici__Loyal__477199F1">
+      <ObjectId>1198627313</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.773</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.773</ModifiedTimestamp>
+      <ColNames>LoyalTo</ColNames>
+      <RefTableId>1054626800</RefTableId>
+      <RefTableName>Character</RefTableName>
+      <RefKeyName>PK__Characte__51594B2894C5F90F</RefKeyName>
+      <RefColNames>CharacterName</RefColNames>
+    </foreign-key>
+    <column id="144" parent="37" name="uID">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="145" parent="37" name="cID">
+      <Position>2</Position>
+      <DataType>char(12 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="146" parent="37" name="grade">
+      <Position>3</Position>
+      <DataType>float|0s</DataType>
+    </column>
+    <column id="147" parent="37" name="finished">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="148" parent="37" name="PK__Particip__B0F413799CFF283B">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>uID
@@ -212,7 +958,7 @@ cID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="45" parent="23" name="PK__Particip__B0F413799CFF283B">
+    <key id="149" parent="37" name="PK__Particip__B0F413799CFF283B">
       <ObjectId>1330103779</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2020-11-18.19:38:26.800</CreatedTimestamp>
@@ -222,7 +968,7 @@ cID</ColNames>
       <UnderlyingIndexName>PK__Particip__B0F413799CFF283B</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="46" parent="23" name="FK__Participate__uID__531856C7">
+    <foreign-key id="150" parent="37" name="FK__Participate__uID__531856C7">
       <ObjectId>1394104007</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2020-11-18.19:38:26.803</CreatedTimestamp>
@@ -233,7 +979,7 @@ cID</ColNames>
       <RefKeyName>PK__Users__DD771E3C001DE805</RefKeyName>
       <RefColNames>uID</RefColNames>
     </foreign-key>
-    <foreign-key id="47" parent="23" name="FK__Participate__cID__540C7B00">
+    <foreign-key id="151" parent="37" name="FK__Participate__cID__540C7B00">
       <ObjectId>1410104064</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2020-11-18.19:38:26.803</CreatedTimestamp>
@@ -245,7 +991,7 @@ cID</ColNames>
       <RefColNames>cID</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <check id="48" parent="23" name="CK__Participa__finis__51300E55">
+    <check id="152" parent="37" name="CK__Participa__finis__51300E55">
       <ObjectId>1362103893</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2020-11-18.19:38:26.800</CreatedTimestamp>
@@ -253,14 +999,14 @@ cID</ColNames>
       <ColNames>finished</ColNames>
       <Predicate>[finished]=0 OR [finished]=1</Predicate>
     </check>
-    <check id="49" parent="23" name="CK__Participated__5224328E">
+    <check id="153" parent="37" name="CK__Participated__5224328E">
       <ObjectId>1378103950</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2020-11-18.19:38:26.800</CreatedTimestamp>
       <ModifiedTimestamp>2020-11-18.19:38:26.800</ModifiedTimestamp>
       <Predicate>[finished]=0 OR [grade]&gt;5</Predicate>
     </check>
-    <check id="50" parent="23" name="CK__Participa__grade__503BEA1C">
+    <check id="154" parent="37" name="CK__Participa__grade__503BEA1C">
       <ObjectId>1346103836</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2020-11-18.19:38:26.800</CreatedTimestamp>
@@ -268,39 +1014,165 @@ cID</ColNames>
       <ColNames>grade</ColNames>
       <Predicate>[grade]&gt;=1 AND [grade]&lt;=10</Predicate>
     </check>
-    <column id="51" parent="24" name="uID">
+    <column id="155" parent="38" name="TeamHouse">
+      <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="156" parent="38" name="Year">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="157" parent="38" name="PlayerName">
+      <Position>3</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="158" parent="38" name="PlayerPosition">
+      <Position>4</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="159" parent="38" name="PK__TeamPlay__45FA58D73B208568">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TeamHouse
+Year
+PlayerName</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="160" parent="38" name="PK__TeamPlay__45FA58D73B208568">
+      <ObjectId>1854629650</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.870</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.870</ModifiedTimestamp>
+      <ColNames>TeamHouse
+Year
+PlayerName</ColNames>
+      <UnderlyingIndexName>PK__TeamPlay__45FA58D73B208568</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="161" parent="38" name="FK__TeamPlayers__7073AF84">
+      <ObjectId>1886629764</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.870</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.870</ModifiedTimestamp>
+      <ColNames>TeamHouse
+Year</ColNames>
+      <RefTableId>1774629365</RefTableId>
+      <RefTableName>Teams</RefTableName>
+      <RefKeyName>PK__Teams__7A0F7093683EA354</RefKeyName>
+      <RefColNames>TeamHouse
+Year</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="162" parent="38" name="FK__TeamPlaye__Playe__7167D3BD">
+      <ObjectId>1902629821</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.873</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.873</ModifiedTimestamp>
+      <ColNames>PlayerName</ColNames>
+      <RefTableId>1086626914</RefTableId>
+      <RefTableName>Magician</RefTableName>
+      <RefKeyName>PK__Magician__51594B28ED2554B5</RefKeyName>
+      <RefColNames>CharacterName</RefColNames>
+    </foreign-key>
+    <check id="163" parent="38" name="CK__TeamPlaye__Playe__6F7F8B4B">
+      <ObjectId>1870629707</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.870</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.870</ModifiedTimestamp>
+      <ColNames>PlayerPosition</ColNames>
+      <Predicate>[PlayerPosition]=&apos;Keeper&apos; OR [PlayerPosition]=&apos;Beater&apos; OR [PlayerPosition]=&apos;Chaser&apos; OR [PlayerPosition]=&apos;Seeker&apos;</Predicate>
+    </check>
+    <column id="164" parent="39" name="TeamHouse">
+      <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="165" parent="39" name="Year">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="166" parent="39" name="BroomModel">
+      <Position>3</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="167" parent="39" name="PK__Teams__7A0F7093683EA354">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TeamHouse
+Year</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="168" parent="39" name="PK__Teams__7A0F7093683EA354">
+      <ObjectId>1790629422</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.863</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.863</ModifiedTimestamp>
+      <ColNames>TeamHouse
+Year</ColNames>
+      <UnderlyingIndexName>PK__Teams__7A0F7093683EA354</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="169" parent="39" name="FK__Teams__TeamHouse__6CA31EA0">
+      <ObjectId>1822629536</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.863</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.863</ModifiedTimestamp>
+      <ColNames>TeamHouse</ColNames>
+      <RefTableId>1630628852</RefTableId>
+      <RefTableName>Houses</RefTableName>
+      <RefKeyName>PK__Houses__50DC02A09C5BDB62</RefKeyName>
+      <RefColNames>HouseName</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <check id="170" parent="39" name="CK__Teams__Year__6BAEFA67">
+      <ObjectId>1806629479</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.863</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.863</ModifiedTimestamp>
+      <ColNames>Year</ColNames>
+      <Predicate>[Year]&gt;=0 AND [Year]&lt;=9999</Predicate>
+    </check>
+    <column id="171" parent="40" name="uID">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="52" parent="24" name="name">
+    <column id="172" parent="40" name="name">
       <Position>2</Position>
       <DataType>varchar(30 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="53" parent="24" name="dateOfBirth">
+    <column id="173" parent="40" name="dateOfBirth">
       <Position>3</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="54" parent="24" name="Costume">
+    <column id="174" parent="40" name="Costume">
       <Position>4</Position>
       <DataType>varchar(20 char)|0s</DataType>
     </column>
-    <index id="55" parent="24" name="PK__Users__DD771E3C001DE805">
+    <index id="175" parent="40" name="PK__Users__DD771E3C001DE805">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>uID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <index id="56" parent="24" name="UQ__Users__579B7C45F116526B">
+    <index id="176" parent="40" name="UQ__Users__579B7C45F116526B">
       <Position>2</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Costume</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="57" parent="24" name="PK__Users__DD771E3C001DE805">
+    <key id="177" parent="40" name="PK__Users__DD771E3C001DE805">
       <ObjectId>1186103266</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2020-11-18.19:38:19.130</CreatedTimestamp>
@@ -309,7 +1181,7 @@ cID</ColNames>
       <UnderlyingIndexName>PK__Users__DD771E3C001DE805</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="58" parent="24" name="UQ__Users__579B7C45F116526B">
+    <key id="178" parent="40" name="UQ__Users__579B7C45F116526B">
       <ObjectId>1202103323</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2020-11-18.19:38:19.130</CreatedTimestamp>
@@ -317,7 +1189,7 @@ cID</ColNames>
       <ColNames>Costume</ColNames>
       <UnderlyingIndexName>UQ__Users__579B7C45F116526B</UnderlyingIndexName>
     </key>
-    <check id="59" parent="24" name="CK__Users__uID__489AC854">
+    <check id="179" parent="40" name="CK__Users__uID__489AC854">
       <ObjectId>1218103380</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2020-11-18.19:38:19.130</CreatedTimestamp>
@@ -325,13 +1197,95 @@ cID</ColNames>
       <ColNames>uID</ColNames>
       <Predicate>[uID]&gt;=100000000 AND [uID]&lt;1000000000</Predicate>
     </check>
-    <check id="60" parent="24" name="CK__Users__dateOfBir__498EEC8D">
+    <check id="180" parent="40" name="CK__Users__dateOfBir__498EEC8D">
       <ObjectId>1234103437</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2020-11-18.19:38:19.133</CreatedTimestamp>
       <ModifiedTimestamp>2020-11-18.19:38:19.133</ModifiedTimestamp>
       <ColNames>dateOfBirth</ColNames>
       <Predicate>datepart(year,[dateOfBirth])&lt;2007</Predicate>
+    </check>
+    <column id="181" parent="41" name="WatcherName">
+      <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="182" parent="41" name="HostTeamHouse">
+      <Position>2</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="183" parent="41" name="HostedTeamHouse">
+      <Position>3</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="184" parent="41" name="Year">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="185" parent="41" name="EnjoymentLevel">
+      <Position>5</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="186" parent="41" name="PK__Watchers__3EEC65A21E2CE5EA">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>WatcherName
+HostTeamHouse
+HostedTeamHouse
+Year</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="187" parent="41" name="PK__Watchers__3EEC65A21E2CE5EA">
+      <ObjectId>1998630163</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.897</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.897</ModifiedTimestamp>
+      <ColNames>WatcherName
+HostTeamHouse
+HostedTeamHouse
+Year</ColNames>
+      <UnderlyingIndexName>PK__Watchers__3EEC65A21E2CE5EA</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="188" parent="41" name="FK__Watchers__Watche__79FD19BE">
+      <ObjectId>2046630334</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.900</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.900</ModifiedTimestamp>
+      <ColNames>WatcherName</ColNames>
+      <RefTableId>1054626800</RefTableId>
+      <RefTableName>Character</RefTableName>
+      <RefKeyName>PK__Characte__51594B2894C5F90F</RefKeyName>
+      <RefColNames>CharacterName</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="189" parent="41" name="FK__Watchers__7908F585">
+      <ObjectId>2030630277</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.897</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.897</ModifiedTimestamp>
+      <ColNames>HostTeamHouse
+HostedTeamHouse
+Year</ColNames>
+      <RefTableId>1918629878</RefTableId>
+      <RefTableName>Games</RefTableName>
+      <RefKeyName>PK__Games__EC5F41B607CF08E6</RefKeyName>
+      <RefColNames>HostTeamHouse
+HostedTeamHouse
+Year</RefColNames>
+    </foreign-key>
+    <check id="190" parent="41" name="CK__Watchers__Enjoym__7814D14C">
+      <ObjectId>2014630220</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2020-12-17.22:05:10.897</CreatedTimestamp>
+      <ModifiedTimestamp>2020-12-17.22:05:10.897</ModifiedTimestamp>
+      <ColNames>EnjoymentLevel</ColNames>
+      <Predicate>[EnjoymentLevel]&gt;=1 AND [EnjoymentLevel]&lt;=7</Predicate>
     </check>
   </database-model>
 </dataSource>

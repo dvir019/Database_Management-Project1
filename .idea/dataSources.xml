@@ -4,8 +4,9 @@
     <data-source source="LOCAL" name="roi0maskalik@techniondbcourse01.database.windows.net" uuid="2720376e-a1d8-49ae-830c-ee8d5e81acb3">
       <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
+      <schema-control>MANUAL</schema-control>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://techniondbcourse01.database.windows.net;database=roi0maskalik</jdbc-url>
+      <jdbc-url>jdbc:sqlserver://techniondbcourse01.database.windows.net;database=roi0maskalik;currentSchema=Experiments</jdbc-url>
     </data-source>
   </component>
 </project>

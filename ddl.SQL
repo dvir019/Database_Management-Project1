@@ -9,7 +9,7 @@ CREATE TABLE Magician
 (
     CharacterName VARCHAR(40) PRIMARY KEY,
     WandNumber    VARCHAR(40) UNIQUE NOT NULL,
-    FOREIGN KEY (CharacterName) REFERENCES Character
+    FOREIGN KEY (CharacterName) REFERENCES Character ON DELETE CASCADE
 );
 
 CREATE TABLE NotMagician
@@ -17,8 +17,8 @@ CREATE TABLE NotMagician
     CharacterName VARCHAR(40) PRIMARY KEY,
     LoyalTo       VARCHAR(40),
 
-    FOREIGN KEY (CharacterName) REFERENCES Character,
-    FOREIGN KEY (LoyalTo) REFERENCES Character (CharacterName)
+    FOREIGN KEY (CharacterName) REFERENCES Character ON DELETE CASCADE,
+    FOREIGN KEY (LoyalTo) REFERENCES Character (CharacterName) --TODO: ON DELETE SET NULL (not possible
 );
 
 CREATE TABLE Feelings
@@ -30,7 +30,7 @@ CREATE TABLE Feelings
     ExtremeMoment VARCHAR(40) NOT NULL,
 
     PRIMARY KEY (FeltBy, FeltTo),
-    FOREIGN KEY (FeltBy) REFERENCES Character (CharacterName),
+    FOREIGN KEY (FeltBy) REFERENCES Character (CharacterName) ON DELETE CASCADE,
     FOREIGN KEY (FeltTo) REFERENCES Character (CharacterName)
 );
 
@@ -49,8 +49,8 @@ CREATE TABLE MagicCast
     MagicUsed   VARCHAR(40) NOT NULL,
 
     PRIMARY KEY (CastedBy, DateAndTime),
-    FOREIGN KEY (CastedBy) REFERENCES Magician (CharacterName),
-    FOREIGN KEY (MagicUsed) REFERENCES Magic (MagicWord)
+    FOREIGN KEY (CastedBy) REFERENCES Magician (CharacterName) ON DELETE CASCADE,-- TODO cascade?
+    FOREIGN KEY (MagicUsed) REFERENCES Magic (MagicWord) ON DELETE CASCADE       -- TODO cascade?
 );
 
 CREATE TABLE AcademicInstitution
@@ -64,13 +64,22 @@ CREATE TABLE AcademicInstitution
 CREATE TABLE HeterogeneousInstitution
 (
     InstitutionName VARCHAR(40) PRIMARY KEY,
-    FOREIGN KEY (InstitutionName) REFERENCES AcademicInstitution
+    FOREIGN KEY (InstitutionName) REFERENCES AcademicInstitution ON DELETE CASCADE
 );
 
 CREATE TABLE HomogeneousInstitution
 (
     InstitutionName VARCHAR(40) PRIMARY KEY,
-    FOREIGN KEY (InstitutionName) REFERENCES AcademicInstitution
+    FOREIGN KEY (InstitutionName) REFERENCES AcademicInstitution ON DELETE CASCADE
+);
+
+CREATE TABLE MembersOfHomogeneous
+(
+    MagicianName    VARCHAR(40) PRIMARY KEY,
+    InstitutionName VARCHAR(40) NOT NULL,
+
+    FOREIGN KEY (MagicianName) REFERENCES Magician (CharacterName) ON DELETE CASCADE,
+    FOREIGN KEY (InstitutionName) REFERENCES HomogeneousInstitution ON DELETE CASCADE
 );
 
 CREATE TABLE Houses
@@ -79,21 +88,30 @@ CREATE TABLE Houses
     Color             VARCHAR(40)        NOT NULL,
     NumberOfResidents INTEGER            NOT NULL,
     BelongsTo         VARCHAR(40)        NOT NULL,
-    HeadOfHouse       VARCHAR(40) UNIQUE NOT NULL, --TODO: Explain why UNIQUE
+    HeadOfHouse       VARCHAR(40) UNIQUE NOT NULL,
 
-    FOREIGN KEY (BelongsTo) REFERENCES HeterogeneousInstitution (InstitutionName),
+    FOREIGN KEY (BelongsTo) REFERENCES HeterogeneousInstitution (InstitutionName) ON DELETE CASCADE,
     FOREIGN KEY (HeadOfHouse) REFERENCES Magician (CharacterName)
+);
+
+CREATE TABLE MembersOfHouses
+(
+    MagicianName VARCHAR(40) PRIMARY KEY,
+    HouseName    VARCHAR(40) NOT NULL,
+
+    FOREIGN KEY (MagicianName) REFERENCES Magician (CharacterName) ON DELETE CASCADE,
+    FOREIGN KEY (HouseName) REFERENCES Houses ON DELETE CASCADE
 );
 
 CREATE TABLE Teams
 (
     TeamHouse  VARCHAR(40) NOT NULL,
-    Year       INTEGER     NOT NULL --TODO:
+    Year       INTEGER     NOT NULL
         CHECK (Year >= 0 AND Year <= 9999),
     BroomModel VARCHAR(40) NOT NULL,
 
     PRIMARY KEY (TeamHouse, Year),
-    FOREIGN KEY (TeamHouse) REFERENCES Houses (HouseName)
+    FOREIGN KEY (TeamHouse) REFERENCES Houses (HouseName) ON DELETE CASCADE
 );
 
 CREATE TABLE TeamPlayers
@@ -102,12 +120,12 @@ CREATE TABLE TeamPlayers
     Year           INTEGER     NOT NULL,
     PlayerName     VARCHAR(40) NOT NULL,
     PlayerPosition VARCHAR(40) NOT NULL
-        CHECK (PlayerName = 'Keeper' OR
-               PlayerName = 'Beater' OR
-               PlayerName = 'Chaser' OR
-               PlayerName = 'Seeker'),
+        CHECK (PlayerPosition = 'Keeper' OR
+               PlayerPosition = 'Beater' OR
+               PlayerPosition = 'Chaser' OR
+               PlayerPosition = 'Seeker'),
     PRIMARY KEY (TeamHouse, Year, PlayerName),
-    FOREIGN KEY (TeamHouse, Year) REFERENCES Teams (TeamHouse, Year),
+    FOREIGN KEY (TeamHouse, Year) REFERENCES Teams (TeamHouse, Year) ON DELETE CASCADE,
     FOREIGN KEY (PlayerName) REFERENCES Magician (CharacterName)
 );
 
@@ -120,8 +138,8 @@ CREATE TABLE Games
     HostedScore     INTEGER     NOT NULL,
 
     PRIMARY KEY (HostTeamHouse, HostedTeamHouse, Year),
-    FOREIGN KEY (HostTeamHouse, Year) REFERENCES Teams (TeamHouse, Year),
-    FOREIGN KEY (HostedTeamHouse, Year) REFERENCES Teams (TeamHouse, Year), -- TODO: אם זה אפשרי, לשנות בקובץ לניתן לטפל כך כבר ברמת ה-דדל
+    FOREIGN KEY (HostTeamHouse, Year) REFERENCES Teams (TeamHouse, Year) ON DELETE CASCADE,
+    FOREIGN KEY (HostedTeamHouse, Year) REFERENCES Teams (TeamHouse, Year) -- TODO: אם זה אפשרי, לשנות בקובץ לניתן לטפל כך כבר ברמת ה-דדל
 );
 
 CREATE TABLE Watchers
@@ -134,23 +152,25 @@ CREATE TABLE Watchers
         CHECK (EnjoymentLevel >= 1 AND EnjoymentLevel <= 7),
 
     PRIMARY KEY (WatcherName, HostTeamHouse, HostedTeamHouse, Year),
-    FOREIGN KEY (HostTeamHouse, HostedTeamHouse, Year) REFERENCES Games (HostTeamHouse, HostedTeamHouse, Year)
+    FOREIGN KEY (HostTeamHouse, HostedTeamHouse, Year) REFERENCES Games (HostTeamHouse, HostedTeamHouse, Year),
+    FOREIGN KEY (WatcherName) REFERENCES Character (CharacterName) ON DELETE CASCADE
 );
 
-CREATE TABLE MembersOfHouses
-(
-    MagicianName VARCHAR(40) PRIMARY KEY,
-    HouseName    VARCHAR(40) NOT NULL,
 
-    FOREIGN KEY (MagicianName) REFERENCES Magician (CharacterName),
-    FOREIGN KEY (HouseName) REFERENCES Houses
-);
 
-CREATE TABLE MembersOfHomogeneous
-(
-    MagicianName    VARCHAR(40) PRIMARY KEY,
-    InstitutionName VARCHAR(40) NOT NULL,
-
-    FOREIGN KEY (MagicianName) REFERENCES Magician (CharacterName),
-    FOREIGN KEY (InstitutionName) REFERENCES HomogeneousInstitution
-);
+DROP TABLE Watchers;
+DROP TABLE Games;
+DROP TABLE TeamPlayers;
+DROP TABLE Teams;
+DROP TABLE MembersOfHouses;
+DROP TABLE Houses;
+DROP TABLE MembersOfHomogeneous;
+DROP TABLE HomogeneousInstitution;
+DROP TABLE HeterogeneousInstitution;
+DROP TABLE AcademicInstitution;
+DROP TABLE MagicCast;
+DROP TABLE Magic;
+DROP TABLE Feelings;
+DROP TABLE NotMagician;
+DROP TABLE Magician;
+DROP TABLE Character;
