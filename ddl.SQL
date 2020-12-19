@@ -84,11 +84,10 @@ CREATE TABLE MembersOfHomogeneous
 
 CREATE TABLE Houses
 (
-    HouseName         VARCHAR(40) PRIMARY KEY,
-    Color             VARCHAR(40)        NOT NULL,
-    NumberOfResidents INTEGER            NOT NULL,
-    BelongsTo         VARCHAR(40)        NOT NULL,
-    HeadOfHouse       VARCHAR(40) UNIQUE NOT NULL,
+    HouseName   VARCHAR(40) PRIMARY KEY,
+    Color       VARCHAR(40)        NOT NULL,
+    BelongsTo   VARCHAR(40)        NOT NULL,
+    HeadOfHouse VARCHAR(40) UNIQUE NOT NULL,
 
     FOREIGN KEY (BelongsTo) REFERENCES HeterogeneousInstitution (InstitutionName) ON DELETE CASCADE,
     FOREIGN KEY (HeadOfHouse) REFERENCES Magician (CharacterName)
@@ -106,8 +105,7 @@ CREATE TABLE MembersOfHouses
 CREATE TABLE Teams
 (
     TeamHouse  VARCHAR(40) NOT NULL,
-    Year       INTEGER     NOT NULL
-        CHECK (Year >= 0 AND Year <= 9999),
+    Year       INTEGER     NOT NULL,
     BroomModel VARCHAR(40) NOT NULL,
 
     PRIMARY KEY (TeamHouse, Year),
@@ -157,7 +155,6 @@ CREATE TABLE Watchers
 );
 
 
-
 DROP TABLE Watchers;
 DROP TABLE Games;
 DROP TABLE TeamPlayers;
@@ -174,3 +171,121 @@ DROP TABLE Feelings;
 DROP TABLE NotMagician;
 DROP TABLE Magician;
 DROP TABLE Character;
+
+
+-- ********************************************** VIEWS ************************************************
+
+
+CREATE TABLE Test1
+(
+    Name    VARCHAR(10) PRIMARY KEY,
+    LoyalTO VARCHAR(20)
+);
+
+INSERT INTO Test1 (Name, LoyalTO)
+VALUES ('avi', 'red'),
+       ('ben', 'red'),
+       ('c', 'blue'),
+       ('d', 'purple'),
+       ('e', 'red'),
+       ('f', 'blue');
+
+SELECT NM.LoyalTo, COUNT(*) AS NumLoyals
+FROM Test1 NM
+GROUP BY NM.LoyalTo
+HAVING COUNT(*) >= 2
+
+
+CREATE TABLE Names
+(
+    Name VARCHAR(10) PRIMARY KEY
+);
+
+CREATE TABLE Inst
+(
+    InstName VARCHAR(40) PRIMARY KEY,
+    Manager  VARCHAR(10),
+    FOREIGN KEY (Manager) REFERENCES Names (Name)
+);
+
+INSERT INTO Names (Name)
+VALUES ('blue'),
+       ('red'),
+       ('purple');
+
+INSERT INTO Inst (InstName, Manager)
+VALUES ('acad2', 'blue');
+
+INSERT INTO Test1 (Name, LoyalTO)
+VALUES ('h', 'purple');
+
+SELECT M.Name
+FROM Names M,
+     (SELECT NM.LoyalTo, COUNT(*) AS NumLoyals
+      FROM Test1 NM
+      GROUP BY NM.LoyalTo
+      HAVING COUNT(*) >= 2) as NM2,
+     Inst AI
+WHERE M.Name = NM2.LoyalTo
+  AND M.Name = AI.Manager
+
+CREATE TABLE Spells
+(
+    CastedBy    VARCHAR(10),
+    DateAndTime DATETIME,
+    FOREIGN KEY (CastedBy) REFERENCES Names (Name)
+);
+
+INSERT INTO Spells (CastedBy, DateAndTime)
+VALUES ('blue', '2004-07-09 09:08'),
+       ('purple', '2017-01-01 09:10');
+
+DELETE
+FROM Spells
+WHERE CastedBy = 'blue'
+
+CREATE VIEW TestView --LeaderMagicianFirstMagicDate
+AS
+SELECT M.Name, CONVERT(date, MC.DateAndTime) AS FirstMagic
+FROM Names M,
+     (SELECT NM.LoyalTo, COUNT(*) AS NumLoyals
+      FROM Test1 NM
+      GROUP BY NM.LoyalTo
+      HAVING COUNT(*) >= 2) as NM2,
+     Inst AI,
+     Spells MC
+WHERE M.Name = NM2.LoyalTo
+  AND M.Name = AI.Manager
+  AND M.Name = MC.CastedBy
+  AND MC.DateAndTime = (select MIN(MC2.DateAndTime)
+                        FROM Spells MC2
+                        WHERE M.Name = MC2.CastedBy)
+
+
+-- ***************************** FINAL ***************************
+CREATE VIEW LeaderMagicianFirstMagicDate
+AS
+SELECT M.CharacterName, CONVERT(date, MC.DateAndTime) AS FirstMagic
+FROM Magician M,
+     (SELECT NM.LoyalTo, COUNT(*) AS NumLoyals
+      FROM NotMagician NM
+      GROUP BY NM.LoyalTo
+      HAVING COUNT(*) >= 10) as NM2,
+     AcademicInstitution AI,
+     MagicCast MC
+WHERE M.CharacterName = NM2.LoyalTo
+  AND M.CharacterName = AI.Manager
+  AND M.CharacterName = MC.CastedBy
+  AND MC.DateAndTime = (SELECT MIN(MC2.DateAndTime)
+                        FROM MagicCast MC2
+                        WHERE M.CharacterName = MC2.CastedBy)
+--**********************************************************************
+
+
+/*
+SELECT NM.LoyalTo, COUNT(*) AS NumLoyals
+FROM NotMagician NM
+GROUP BY NM.LoyalTo
+HAVING COUNT(*) >= 10
+ */
+

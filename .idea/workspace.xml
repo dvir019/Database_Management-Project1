@@ -19,13 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b18ccf45-778d-4f24-984f-daf3b303a19e" name="Default Changelist" comment="Add DDL">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="b18ccf45-778d-4f24-984f-daf3b303a19e" name="Default Changelist" comment="Add to DDL">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/2720376e-a1d8-49ae-830c-ee8d5e81acb3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2720376e-a1d8-49ae-830c-ee8d5e81acb3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/2720376e-a1d8-49ae-830c-ee8d5e81acb3/storage_v2/_src_/database/roi0maskalik.XcekCw/schema/Project1.WHxTyA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2720376e-a1d8-49ae-830c-ee8d5e81acb3/storage_v2/_src_/database/roi0maskalik.XcekCw/schema/Project1.WHxTyA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/2720376e-a1d8-49ae-830c-ee8d5e81acb3/storage_v2/_src_/database/roi0maskalik.XcekCw/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2720376e-a1d8-49ae-830c-ee8d5e81acb3/storage_v2/_src_/database/roi0maskalik.XcekCw/schema/dbo.sYMBAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ddl.SQL" beforeDir="false" afterPath="$PROJECT_DIR$/ddl.SQL" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608203690624</updated>
-      <workItem from="1608203691927" duration="25689000" />
+      <workItem from="1608203691927" duration="32135000" />
     </task>
     <task id="LOCAL‎00001" summary="create new project">
       <created>1608218704132</created>
@@ -71,7 +69,13 @@
       <option name="presentableId" value="LOCAL‎00002" />
       <updated>1608218728234</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL‎00003" summary="Add to DDL">
+      <created>1608238277258</created>
+      <option name="number" value="LOCAL‎00003" />
+      <option name="presentableId" value="LOCAL‎00003" />
+      <updated>1608238277258</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,29 +95,34 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create new project" />
     <MESSAGE value="Add DDL" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add DDL" />
+    <MESSAGE value="Add to DDL" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add to DDL" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="216" y="346" key="#SQL_Dialects" timestamp="1608239589352">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="216" y="346" key="#SQL_Dialects/0.0.1680.1010@0.0.1680.1010" timestamp="1608239589352" />
     <state x="432" y="163" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608229927342">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="432" y="163" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1608229927342" />
-    <state width="1205" height="269" key="GridCell.Tab.0.bottom" timestamp="1608229832157">
+    <state width="1205" height="269" key="GridCell.Tab.0.bottom" timestamp="1608386985016">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1205" height="269" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1608229832157" />
-    <state width="1205" height="269" key="GridCell.Tab.0.center" timestamp="1608229832156">
+    <state width="1205" height="269" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1608386985016" />
+    <state width="1205" height="269" key="GridCell.Tab.0.center" timestamp="1608386985016">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1205" height="269" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1608229832156" />
-    <state width="1205" height="269" key="GridCell.Tab.0.left" timestamp="1608229832156">
+    <state width="1205" height="269" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1608386985016" />
+    <state width="1205" height="269" key="GridCell.Tab.0.left" timestamp="1608386985015">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1205" height="269" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1608229832156" />
-    <state width="1205" height="269" key="GridCell.Tab.0.right" timestamp="1608229832157">
+    <state width="1205" height="269" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1608386985015" />
+    <state width="1205" height="269" key="GridCell.Tab.0.right" timestamp="1608386985016">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1205" height="269" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1608229832157" />
+    <state width="1205" height="269" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1608386985016" />
     <state width="234" height="471" key="HiddenNamespacesPopup" timestamp="1608229826157">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
