@@ -289,3 +289,146 @@ GROUP BY NM.LoyalTo
 HAVING COUNT(*) >= 10
  */
 
+/*
+SELECT *
+FROM Test1
+WHERE EXISTS(SELECT * FROM Magician)
+  AND LoyalTO = ALL (SELECT CharacterName FROM Magician)
+ */
+
+CREATE VIEW LivingInMovie
+AS
+SELECT M.CharacterName
+FROM Magician M
+WHERE EXISTS(SELECT *
+             FROM Feelings F1
+             WHERE M.CharacterName = F1.FeltBy
+               AND F1.Emotion = 'love')
+  AND NOT EXISTS(SELECT *
+                 FROM Feelings F2
+                 WHERE M.CharacterName = F2.FeltBy
+                   AND F2.Emotion = 'hate')
+  AND EXISTS(SELECT *
+             FROM Feelings F3
+             WHERE M.CharacterName = F3.FeltTo
+               AND F3.Emotion = 'hate')
+  AND NOT EXISTS(SELECT *
+                 FROM Feelings F4
+                 WHERE M.CharacterName = F4.FeltTo
+                   AND F4.Emotion = 'love')
+/*
+SELECT DISTINCT CONVERT(date, MC.DateAndTime)
+FROM MagicCast MC
+
+
+SELECT DISTINCT MC.MagicUsed
+FROM MagicCast MC,
+     (SELECT DISTINCT CONVERT(date, DateAndTime) as date
+      FROM MagicCast) AS dates
+WHERE EXISTS(SELECT *
+             FROM MagicCast
+             WHERE CONVERT(date, MC.DateAndTime) = dates.date
+               AND MC.MagicUsed = MagicUsed)
+
+ */
+
+CREATE TABLE LiveMovie2
+(
+    CharacterName VARCHAR(10) PRIMARY KEY
+);
+
+CREATE TABLE UsefulMagics
+(
+    MagicUsed VARCHAR(40) PRIMARY KEY
+);
+
+CREATE TABLE Spells2
+(
+    CastedBy    VARCHAR(10),
+    DateAndTime DATETIME,
+    MagicUsed   VARCHAR(40),
+    PRIMARY KEY (CastedBy, DateAndTime)
+);
+
+INSERT INTO LiveMovie2 (CharacterName)
+VALUES ('avi'),
+       ('gal'),
+       ('moshe')
+
+INSERT INTO UsefulMagics (MagicUsed)
+VALUES ('abra'),
+       ('kadabra')
+
+INSERT INTO Spells2 (CastedBy, DateAndTime, MagicUsed)
+VALUES /*('gal', '1985-02-10 09:00', 'abra'), ,
+       ('avi', '2005-10-09 09:10', 'hoppa'),
+       ('avi', '2000-07-09 09:25', 'abra'),
+       ('gal', '2000-07-10 09:50', 'kadabra'),
+       ('gal', '1985-07-10 09:50', 'abra'),
+         */
+       ('moshe', '2010-08-01 09:27', 'kadabra'),
+       ('moshe', '2010-08-01 09:28', 'kadabra')
+
+
+CREATE VIEW Mashehu
+AS
+SELECT ABC.CharacterName, SUM(ABC.TimesUsed) a
+FROM (SELECT LIM.CharacterName, VUM.MagicUsed, COUNT(*) AS TimesUsed
+      FROM LiveMovie2 LIM,
+           UsefulMagics VUM,
+           Spells2 MC
+      WHERE MC.CastedBy = LIM.CharacterName
+        AND MC.MagicUsed = VUM.MagicUsed
+      GROUP BY LIM.CharacterName, VUM.MagicUsed) AS ABC
+GROUP BY ABC.CharacterName
+ORDER BY a DESC
+OFFSET (0) ROWS;
+
+
+-- dsgsdgsdgsdsdsdgsdgsdgsdgsdgsdgsdgsdgdsg
+
+CREATE VIEW VeryUsableMagics
+AS
+SELECT MagicUsed
+FROM MagicCast
+    EXCEPT (SELECT DISTINCT MC.MagicUsed
+            FROM MagicCast MC,
+                 (SELECT DISTINCT CONVERT(date, DateAndTime) as date
+                  FROM MagicCast) AS dates
+            WHERE NOT EXISTS(SELECT *
+                             FROM MagicCast
+                             WHERE CONVERT(date, MC.DateAndTime) = dates.date
+                               AND MC.MagicUsed = MagicUsed))
+
+SELECT IndividualUsableMagicCount.CharacterName,
+       SUM(IndividualUsableMagicCount.TimesUsed) AS TotalUsableMagicCount
+FROM (SELECT LIM.CharacterName, VUM.MagicUsed, COUNT(*) AS TimesUsed
+      FROM LivingInMovie LIM,
+           VeryUsableMagics VUM,
+           MagicCast MC
+      WHERE MC.CastedBy = LIM.CharacterName
+        AND MC.MagicUsed = VUM.MagicUsed
+      GROUP BY LIM.CharacterName, VUM.MagicUsed) AS IndividualUsableMagicCount
+GROUP BY IndividualUsableMagicCount.CharacterName
+ORDER BY TotalUsableMagicCount DESC
+OFFSET (0) ROWS;
+
+
+SELECT T.LoyalTO
+FROM Test1 T
+    EXCEPT (SELECT T2.LoyalTO FROM Test1 T2 WHERE T2.LoyalTO = 'red')
+
+SELECT *
+FROM Test1,
+     Test1 t
+
+
+SELECT DISTINCT MC.MagicUsed
+FROM MagicCast MC,
+     (SELECT DISTINCT CONVERT(date, DateAndTime) as date
+      FROM MagicCast) AS dates
+WHERE NOT EXISTS(SELECT *
+                 FROM MagicCast
+                 WHERE CONVERT(date, MC.DateAndTime) = dates.date
+                   AND MC.MagicUsed = MagicUsed)
+
