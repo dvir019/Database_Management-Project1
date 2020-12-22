@@ -8,7 +8,8 @@ CREATE TABLE Character
 CREATE TABLE Magician
 (
     CharacterName VARCHAR(40) PRIMARY KEY,
-    WandNumber    VARCHAR(40) UNIQUE NOT NULL,
+    WandNumber    INTEGER UNIQUE NOT NULL
+        CHECK (WandNumber > 0),
     FOREIGN KEY (CharacterName) REFERENCES Character ON DELETE CASCADE
 );
 
@@ -57,14 +58,15 @@ CREATE TABLE AcademicInstitution
 (
     InstitutionName VARCHAR(40) PRIMARY KEY,
     Manager         VARCHAR(40) UNIQUE NOT NULL,
-    -- TODO: Two tables or attribute, and check cover
+
     FOREIGN KEY (Manager) REFERENCES Magician (CharacterName)
 );
 
 CREATE TABLE HeterogeneousInstitution
 (
     InstitutionName VARCHAR(40) PRIMARY KEY,
-    FOREIGN KEY (InstitutionName) REFERENCES AcademicInstitution ON DELETE CASCADE
+    FOREIGN KEY (InstitutionName) REFERENCES AcademicInstitution
+        ON DELETE CASCADE
 );
 
 CREATE TABLE HomogeneousInstitution
@@ -89,7 +91,8 @@ CREATE TABLE Houses
     BelongsTo   VARCHAR(40)        NOT NULL,
     HeadOfHouse VARCHAR(40) UNIQUE NOT NULL,
 
-    FOREIGN KEY (BelongsTo) REFERENCES HeterogeneousInstitution (InstitutionName) ON DELETE CASCADE,
+    FOREIGN KEY (BelongsTo) REFERENCES HeterogeneousInstitution (InstitutionName)
+        ON DELETE CASCADE,
     FOREIGN KEY (HeadOfHouse) REFERENCES Magician (CharacterName)
 );
 
@@ -150,7 +153,8 @@ CREATE TABLE Watchers
         CHECK (EnjoymentLevel >= 1 AND EnjoymentLevel <= 7),
 
     PRIMARY KEY (WatcherName, HostTeamHouse, HostedTeamHouse, Year),
-    FOREIGN KEY (HostTeamHouse, HostedTeamHouse, Year) REFERENCES Games (HostTeamHouse, HostedTeamHouse, Year),
+    FOREIGN KEY (HostTeamHouse, HostedTeamHouse, Year) REFERENCES
+        Games (HostTeamHouse, HostedTeamHouse, Year),
     FOREIGN KEY (WatcherName) REFERENCES Character (CharacterName) ON DELETE CASCADE
 );
 
@@ -316,6 +320,43 @@ WHERE EXISTS(SELECT *
                  FROM Feelings F4
                  WHERE M.CharacterName = F4.FeltTo
                    AND F4.Emotion = 'love')
+
+CREATE TABLE Emotions
+(
+    FeltBy  VARCHAR(10),
+    FeltTo  VARCHAR(10),
+    Emotion VARCHAR(40),
+
+    PRIMARY KEY (FeltBy, FeltTo)
+);
+
+INSERT INTO Emotions (FeltBy, FeltTo, Emotion)
+VALUES ('blue', 'dani', 'hate'),
+       ('x', 'blue', 'hate');
+/*
+CREATE VIEW LiveInMovie2
+AS
+SELECT M.Name
+FROM Names M
+WHERE EXISTS(SELECT *
+             FROM Emotions F1
+             WHERE M.Name = F1.FeltBy
+               AND F1.Emotion = 'love')
+  AND NOT EXISTS(SELECT *
+                 FROM Emotions F2
+                 WHERE M.Name = F2.FeltBy
+                   AND F2.Emotion = 'hate')
+  AND EXISTS(SELECT *
+             FROM Emotions F3
+             WHERE M.Name = F3.FeltTo
+               AND F3.Emotion = 'hate')
+  AND NOT EXISTS(SELECT *
+                 FROM Emotions F4
+                 WHERE M.Name = F4.FeltTo
+                   AND F4.Emotion = 'love')
+
+ */
+
 /*
 SELECT DISTINCT CONVERT(date, MC.DateAndTime)
 FROM MagicCast MC
@@ -366,10 +407,10 @@ VALUES /*('gal', '1985-02-10 09:00', 'abra'), ,
        ('gal', '2000-07-10 09:50', 'kadabra'),
        ('gal', '1985-07-10 09:50', 'abra'),
          */
-       ('moshe', '2010-08-01 09:27', 'kadabra'),
-       ('moshe', '2010-08-01 09:28', 'kadabra')
+    ('moshe', '2010-08-01 09:27', 'kadabra'),
+    ('moshe', '2010-08-01 09:28', 'kadabra')
 
-
+/*
 CREATE VIEW Mashehu
 AS
 SELECT ABC.CharacterName, SUM(ABC.TimesUsed) a
@@ -384,8 +425,33 @@ GROUP BY ABC.CharacterName
 ORDER BY a DESC
 OFFSET (0) ROWS;
 
+INSERT INTO Spells2 (CastedBy, DateAndTime, MagicUsed)
+VALUES ('y', '2011-03-11 19:10', 'abra'),
+       ('avi', '2005-10-09 09:10', 'hoppa'),
+       ('avi', '2000-07-09 09:25', 'abra'),
+       ('gal', '2000-07-10 09:50', 'kadabra'),
+       ('gal', '1985-07-10 09:50', 'abra');
+
+ */
+
+/*
+CREATE VIEW UsefullMagics2
+AS
+SELECT MagicUsed
+FROM Spells2
+    EXCEPT (SELECT MC.MagicUsed
+            FROM Spells2 MC,
+                 (SELECT DISTINCT CONVERT(date, DateAndTime) as date
+                  FROM Spells2) AS Dates
+            WHERE NOT EXISTS(SELECT *
+                             FROM Spells2 MC2
+                             WHERE CONVERT(date, MC2.DateAndTime) = Dates.date
+                               AND MC.MagicUsed = MC2.MagicUsed))
+
+ */
 
 -- dsgsdgsdgsdsdsdgsdgsdgsdgsdgsdgsdgsdgdsg
+
 
 CREATE VIEW VeryUsableMagics
 AS
@@ -393,13 +459,16 @@ SELECT MagicUsed
 FROM MagicCast
     EXCEPT (SELECT DISTINCT MC.MagicUsed
             FROM MagicCast MC,
-                 (SELECT DISTINCT CONVERT(date, DateAndTime) as date
-                  FROM MagicCast) AS dates
+                 (SELECT DISTINCT CONVERT(date, DateAndTime) as Date
+                  FROM MagicCast) AS Dates
             WHERE NOT EXISTS(SELECT *
-                             FROM MagicCast
-                             WHERE CONVERT(date, MC.DateAndTime) = dates.date
-                               AND MC.MagicUsed = MagicUsed))
+                             FROM MagicCast MC2
+                             WHERE CONVERT(date, MC2.DateAndTime) = Dates.Date
+                               AND MC.MagicUsed = MC2.MagicUsed))
 
+
+CREATE VIEW MovieMagicianTotalUsableMagic
+AS
 SELECT IndividualUsableMagicCount.CharacterName,
        SUM(IndividualUsableMagicCount.TimesUsed) AS TotalUsableMagicCount
 FROM (SELECT LIM.CharacterName, VUM.MagicUsed, COUNT(*) AS TimesUsed
@@ -431,4 +500,11 @@ WHERE NOT EXISTS(SELECT *
                  FROM MagicCast
                  WHERE CONVERT(date, MC.DateAndTime) = dates.date
                    AND MC.MagicUsed = MagicUsed)
+
+
+
+
+
+
+
 

@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b18ccf45-778d-4f24-984f-daf3b303a19e" name="Default Changelist" comment="Add heat view">
+    <list default="true" id="b18ccf45-778d-4f24-984f-daf3b303a19e" name="Default Changelist" comment="Add second view">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/2720376e-a1d8-49ae-830c-ee8d5e81acb3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2720376e-a1d8-49ae-830c-ee8d5e81acb3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/2720376e-a1d8-49ae-830c-ee8d5e81acb3/storage_v2/_src_/database/roi0maskalik.XcekCw/schema/Project1.WHxTyA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2720376e-a1d8-49ae-830c-ee8d5e81acb3/storage_v2/_src_/database/roi0maskalik.XcekCw/schema/Project1.WHxTyA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/2720376e-a1d8-49ae-830c-ee8d5e81acb3/storage_v2/_src_/database/roi0maskalik.XcekCw/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2720376e-a1d8-49ae-830c-ee8d5e81acb3/storage_v2/_src_/database/roi0maskalik.XcekCw/schema/dbo.sYMBAA.meta" afterDir="false" />
@@ -56,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608203690624</updated>
-      <workItem from="1608203691927" duration="45787000" />
+      <workItem from="1608203691927" duration="51461000" />
     </task>
     <task id="LOCAL‎00001" summary="create new project">
       <created>1608218704132</created>
@@ -82,7 +82,13 @@
       <option name="presentableId" value="LOCAL‎00004" />
       <updated>1608387421045</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL‎00005" summary="Add second view">
+      <created>1608461886500</created>
+      <option name="number" value="LOCAL‎00005" />
+      <option name="presentableId" value="LOCAL‎00005" />
+      <updated>1608461886500</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,7 +110,8 @@
     <MESSAGE value="Add DDL" />
     <MESSAGE value="Add to DDL" />
     <MESSAGE value="Add heat view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add heat view" />
+    <MESSAGE value="Add second view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add second view" />
   </component>
   <component name="WindowStateProjectService">
     <state x="216" y="346" key="#SQL_Dialects" timestamp="1608239589352">
@@ -115,22 +122,22 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="432" y="163" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1608229927342" />
-    <state width="1205" height="339" key="GridCell.Tab.0.bottom" timestamp="1608461821866">
+    <state width="1205" height="431" key="GridCell.Tab.0.bottom" timestamp="1608468773381">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1205" height="339" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1608461821866" />
-    <state width="1205" height="339" key="GridCell.Tab.0.center" timestamp="1608461821866">
+    <state width="1205" height="431" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1608468773381" />
+    <state width="1205" height="431" key="GridCell.Tab.0.center" timestamp="1608468773379">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1205" height="339" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1608461821866" />
-    <state width="1205" height="339" key="GridCell.Tab.0.left" timestamp="1608461821865">
+    <state width="1205" height="431" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1608468773379" />
+    <state width="1205" height="431" key="GridCell.Tab.0.left" timestamp="1608468773379">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1205" height="339" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1608461821865" />
-    <state width="1205" height="339" key="GridCell.Tab.0.right" timestamp="1608461821866">
+    <state width="1205" height="431" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1608468773379" />
+    <state width="1205" height="431" key="GridCell.Tab.0.right" timestamp="1608468773380">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1205" height="339" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1608461821866" />
+    <state width="1205" height="431" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1608468773380" />
     <state width="234" height="471" key="HiddenNamespacesPopup" timestamp="1608229826157">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -143,10 +150,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="712" y="364" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1680.1010@0.0.1680.1010" timestamp="1608229941882" />
-    <state x="722" y="382" width="316" height="246" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1608461267071">
+    <state x="722" y="382" width="316" height="246" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1608468475018">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="722" y="382" width="316" height="246" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1680.1010@0.0.1680.1010" timestamp="1608461267070" />
+    <state x="722" y="382" width="316" height="246" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1680.1010@0.0.1680.1010" timestamp="1608468475018" />
     <state x="661" y="211" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1608217268882">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
